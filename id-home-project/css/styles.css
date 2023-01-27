@@ -46,12 +46,19 @@ body {
 .nav-items {
   display: flex;
   list-style: none;
+  align-items: center;
 }
 
 .nav-items a {
   padding-left: 3em;
   text-decoration: none;
   color: white;
+}
+
+/*HAMBURGER NAV*/
+
+.hamburger {
+  display: none;
 }
 
 /*HERO SECTION OF HOME PAGE*/
@@ -100,4 +107,54 @@ body {
 
 .card-content {
   width: 30rem;
+}
+
+/*@MEDIA FOR HAMBURGER MENU*/
+
+@media screen and (max-width: 768px) {
+  .main-nav {
+    overflow-x: hidden;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+  }
+  .hamburger span {
+    flex-direction: column;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    margin: 2.5px;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .nav-items-active {
+    position: absolute;
+    right: 0px;
+    height: 20vh;
+    top: 7vh;
+    background-color: #4a5c5f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .hero-text {
+    position: absolute;
+    padding-left: 5%;
+    bottom: 75%;
+    font-size: 3.3em;
+    font-weight: 200;
+    color: var(--on-primary-text);
+  }
+
+  .hero-sub-text {
+    font-size: 1.4em;
+  }
 }
