@@ -168,6 +168,17 @@ label {
   padding-left: 0.5rem;
 }
 
+button:disabled {
+  background-color: lightgray;
+  height: 3.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--on-primary-text);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 .submit-button {
   height: 3.5em;
   font-size: 1rem;
@@ -180,10 +191,12 @@ label {
 }
 
 .error-message {
+  position:absolute;
   display: none;
   background-color: rgb(246, 203, 203);
   height: 2em;
   padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 0.5rem;
   font-size: 0.9rem;
   font-family: "Work sans", sans-serif;
