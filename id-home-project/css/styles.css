@@ -168,7 +168,7 @@ label {
   padding-left: 0.5rem;
 }
 
-button:disabled {
+.submit-button:disabled {
   background-color: lightgray;
   height: 3.5em;
   font-size: 1rem;
