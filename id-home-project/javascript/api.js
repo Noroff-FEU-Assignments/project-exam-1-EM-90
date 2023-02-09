@@ -1,5 +1,8 @@
 const apiUrl = "https://emdevelopment.no/Project-exam-1/wp-json/wp/v2/posts";
 const container = document.querySelector(".blog-post-container");
+const buttonLink =
+  "https://emdevelopment.no/Project-exam-1/wp-json/wp/v2/posts?per_page=20";
+const postBtn = document.querySelector(".post-btn");
 let blogPostList = "";
 
 async function fetchApi() {

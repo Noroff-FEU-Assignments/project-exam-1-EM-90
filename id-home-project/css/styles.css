@@ -232,6 +232,18 @@ label {
   padding-bottom: 0.4rem;
 }
 
+.post-btn {
+  display: flex;
+  justify-content: center;
+  border: none;
+  text-align: center;
+  padding: 15px 20px;
+  background-color: #1b7a61;
+  color: var(--on-primary-text);
+  width: 10%;
+  margin: 0 auto;
+}
+
 /*FOOTER*/
 
 footer {
