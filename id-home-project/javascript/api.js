@@ -1,6 +1,7 @@
-const apiUrl = "https://emdevelopment.no/Project-exam-1/wp-json/wp/v2/posts?";
+const apiUrl =
+  "https://emdevelopment.no/Project-exam-1/wp-json/wp/v2/posts?_embed";
 const container = document.querySelector(".blog-post-container");
-const postButton = document.querySelector(".post-btn");
+const postButton = document.querySelector(".post-button");
 let amountOfPages = 10;
 let blogPostList = "";
 
@@ -15,11 +16,13 @@ const AddBlogPostToHtml = (data) => {
   data.forEach((post) => {
     blogPostList += `
                     <div class="post-block">
+                    <img src="${post._embedded["wp:featuredmedia"][0].source_url}" class="featured-images">
                      <h2 class="post-title">${post.title.rendered}</h2>
                      <p class="post-text">${post.excerpt.rendered}</p>
                     </div>
                    `;
     container.innerHTML = blogPostList;
+    console.log(post);
   });
 };
 

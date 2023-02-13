@@ -1,17 +1,32 @@
-async function GetFeaturedPosts(){
-    const response = await fetch("https://emdevelopment.no/Project-exam-1/wp-json/wp/v2/posts?");
-    const results = await response.json();
-    const data = await results; 
+let featuredData = "";
+let featuredContainer = document.querySelector(".featured-container");
 
-    console.log (data);
+async function GetFeaturedPosts() {
+  const response = await fetch(
+    "https://emdevelopment.no/Project-exam-1/wp-json/wp/v2/posts?_embed"
+  );
+  const results = await response.json();
+  const data = await results;
 
-    for (let i = 0; i < data.length; i++){
-        if (data.length <= 6) return;
-        console.log (data[i]);
-    }
-
-   
+  return data;
 }
 
-GetFeaturedPosts();
+const AddFeaturedPosts = (data) => {
+  for (let i = 0; i < 6; i++) {
+    console.log(data[i]);
+    featuredData += `
+                              <div class="featured-block">
+                               <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}" class="featured-images">
+                               <h2 class="featured-title">${data[i].title.rendered}</h2>
+                               <p class="featured-text">${data[i].excerpt.rendered}</p>
+                              </div>
+                             `;
+    featuredContainer.innerHTML = featuredData;
+  }
+};
 
+const OnMounted = async () => {
+  const data = await GetFeaturedPosts();
+  AddFeaturedPosts(data);
+};
+OnMounted();
