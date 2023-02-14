@@ -191,6 +191,12 @@ label {
 }
 
 /*BLOG PAGE*/
+
+.header-blog-posts {
+  text-align: center;
+  padding: 2em 0em 1em;
+}
+
 .grid-container {
   width: 100vw;
   display: flex;
@@ -208,7 +214,6 @@ label {
 
 .post-block {
   border-radius: 5px;
-  justify-content: flex-start;
   padding: 1rem 5rem;
   width: 40rem;
   line-height: 1.8rem;
