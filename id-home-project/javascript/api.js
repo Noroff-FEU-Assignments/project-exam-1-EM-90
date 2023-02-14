@@ -19,11 +19,13 @@ const AddBlogPostToHtml = (data) => {
   newPosts.forEach((post) => {
     fetchedPostIds.push(post.id);
     blogPostList += `
-                    <div class="post-block">
-                      <img src="${post._embedded["wp:featuredmedia"][0].source_url}" class="featured-images">
-                      <h2 class="post-title">${post.title.rendered}</h2>
-                      <p class="post-text">${post.excerpt.rendered}</p>
-                    </div>
+                   <a href="post-details" class="post-block">
+                     <div>
+                       <img src="${post._embedded["wp:featuredmedia"][0].source_url}" class="post-images">
+                       <h2 class="post-title">${post.title.rendered}</h2>
+                       <p class="post-text">${post.excerpt.rendered}</p>
+                     </div>
+                    </a>
                    `;
     container.innerHTML = blogPostList;
     console.log(post);

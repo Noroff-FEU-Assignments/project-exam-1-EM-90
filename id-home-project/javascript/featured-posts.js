@@ -14,12 +14,13 @@ async function GetFeaturedPosts() {
 const AddFeaturedPosts = (data) => {
   for (let i = 0; i < 6; i++) {
     console.log(data[i]);
-    featuredData += `
-                              <div class="featured-block">
+    featuredData += `       <a href="post-details" class="featured-block">
+                              <div>
                                <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}" class="featured-images">
                                <h2 class="featured-title">${data[i].title.rendered}</h2>
                                <p class="featured-text">${data[i].excerpt.rendered}</p>
                               </div>
+                            </a>
                              `;
     featuredContainer.innerHTML = featuredData;
   }

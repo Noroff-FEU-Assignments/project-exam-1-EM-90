@@ -23,6 +23,8 @@ a {
 
 body {
   min-height: 100vh;
+  background-color: #ebdfc8;
+ 
 }
 
 .logo {
@@ -104,12 +106,14 @@ body {
   background-color: #ffffff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 1em 1em;
+  text-decoration: none;
+  color:rgb(38, 38, 38);
 }
 
 .featured-images {
   object-fit: cover;
-  width: 30em;
-  height: 20em;
+  width: 30rem;
+  height: 12em;
 }
 
 /*CONTACT PAGE*/
@@ -214,11 +218,20 @@ label {
 
 .post-block {
   border-radius: 5px;
-  padding: 1rem 5rem;
+  padding: 1rem 1rem;
   width: 40rem;
   line-height: 1.8rem;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  text-decoration: none;
+  color:rgb(38, 38, 38);
+
+}
+
+.post-images{
+  object-fit: cover;
+  width: 100%;
+  height: 20em;
 }
 
 .post-title {
