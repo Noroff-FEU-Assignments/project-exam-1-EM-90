@@ -225,7 +225,19 @@ label {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   text-decoration: none;
   color:rgb(38, 38, 38);
+  transition: 0.4;
 
+}
+
+.post-block:hover{
+  animation-name: lift;
+  animation-timing-function: ease;
+
+}
+
+@keyframes lift {
+  0% { transform: translateY (0);}
+  50%{ transform: translateY(-50px);}
 }
 
 .post-images{
