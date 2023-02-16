@@ -1,6 +1,6 @@
 @import url(/id-home-project/css/root-var.css);
 
-/*GLOBAL STYLES*/
+/*----------------------------------------------------------------------------GLOBAL STYLES*/
 
 * {
   box-sizing: border-box;
@@ -63,7 +63,7 @@ body {
   z-index: 2;
 }
 
-/*HERO SECTION OF HOME PAGE*/
+/*---------------------------------------------------------------------------------------------HERO SECTION OF HOME PAGE*/
 
 .hero-container {
   width: 100%;
@@ -92,7 +92,7 @@ body {
   font-size: 1.8rem;
 }
 
-/*FEATURED ARTICLE SECTION*/
+/*------------------------------------------------------------------------------------------------FEATURED ARTICLE SECTION*/
 
 .featured-container {
   display: flex;
@@ -115,7 +115,7 @@ body {
   height: 12em;
 }
 
-/*CONTACT PAGE*/
+/*---------------------------------------------------------------------------------------------CONTACT PAGE*/
 
 .form-container {
   width: 100%;
@@ -193,7 +193,7 @@ label {
   color: var(--main-text-color);
 }
 
-/*BLOG PAGE*/
+/*-------------------------------------------------------------------------------------BLOG PAGE*/
 
 .header-blog-posts {
   text-align: center;
@@ -256,7 +256,29 @@ label {
   cursor: pointer;
 }
 
-/*FOOTER*/
+/*-------------------------------------------------------------------------------------SPESIFIC POSTS*/
+
+.spesific-post {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 5rem;
+}
+
+.post-wraper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spesific-image {
+  object-fit: cover;
+  width: 100%;
+  height: 60vh;
+}
+
+/*-------------------------------------------------------------------------------------FOOTER*/
 
 footer {
   display: flex;
@@ -285,7 +307,7 @@ footer p {
   color: var(--on-primary-text);
 }
 
-/*@MEDIA FOR HAMBURGER MENU*/
+/*------------------------------------------------------------------------------------------@MEDIA FOR HAMBURGER MENU*/
 
 @media screen and (max-width: 768px) {
   .main-nav {
