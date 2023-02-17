@@ -1,5 +1,5 @@
 let featuredData = "";
-let featuredContainer = document.querySelector(".featured-container");
+let featuredContainer = document.querySelector(".slider");
 
 async function GetFeaturedPosts() {
   const response = await fetch(
@@ -12,7 +12,7 @@ async function GetFeaturedPosts() {
 }
 
 const AddFeaturedPosts = (data) => {
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 8; i++) {
     console.log(data[i]);
     featuredData += `       <a href="post-details" class="featured-block">
                               <div>
