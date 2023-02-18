@@ -106,16 +106,26 @@ body {
 
 .left-handel,
 .right-handel {
+  display: flex;
+  align-items: center;
   padding: 1rem 2rem;
-  background-color: gray;
+  background-color: rgba(42, 42, 42, 0.729);
+}
+
+.left-handel {
+  display: none;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 4rem;
+  color: white;
 }
 
 .featured-block {
   flex: 0 0 25%;
   max-width: 25%;
   background-color: #ffffff;
-  border-left: 0.5px solid rgb(174, 174, 174);
-  border-left-style: dotted;
   padding: 1em 1em;
   text-decoration: none;
   color: rgb(38, 38, 38);
