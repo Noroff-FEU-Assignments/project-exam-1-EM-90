@@ -18,7 +18,7 @@ async function GetFeaturedPosts() {
 const AddFeaturedPosts = (data) => {
   for (let i = 0; i < 8; i++) {
     console.log(data[i]);
-    featuredData += `       <a href="post-details" class="featured-block">
+    featuredData += `       <a href="spesific-post.html?id=" class="featured-block">
                               <div>
                                <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}" class="featured-images">
                                <h2 class="featured-title">${data[i].title.rendered}</h2>
@@ -61,6 +61,8 @@ const OnMounted = async () => {
 };
 
 OnMounted();
+
+// OLD code without
 
 /*function Carousel() {
   const cardWidth = cards[0].offsetWidth;

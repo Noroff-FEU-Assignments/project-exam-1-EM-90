@@ -97,17 +97,13 @@ body {
 .carousel-container {
   display: flex;
   width: 100%;
+  overflow: hidden;
 }
 
 .slider {
   width: 100%;
   display: flex;
-  overflow-x: hidden;
-}
-.slider-active {
-  width: 100%;
-  display: flex;
-  overflow-x: visible;
+  transition: 2000ms;
 }
 
 .featured-block {
@@ -116,6 +112,7 @@ body {
   padding: 2% 1%;
   text-decoration: none;
   color: rgb(38, 38, 38);
+  border: 0.1px solid rgb(233, 233, 233);
 }
 
 .featured-images {
@@ -130,7 +127,7 @@ body {
   border: none;
   display: flex;
   align-items: center;
-  padding: 2% 1%;
+  padding: 0.5% 0.5%;
   cursor: pointer;
   z-index: 10;
   background-color: #7ea09783;
