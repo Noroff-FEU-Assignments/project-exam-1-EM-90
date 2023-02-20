@@ -18,10 +18,8 @@ async function GetFeaturedPosts() {
 const AddFeaturedPosts = (data) => {
   for (let i = 0; i < 8; i++) {
     //added the postId to get the querystring to the spesific id (post)
-
-    const postId = data[i].id;
     console.log(data[i]);
-    featuredData += `       <a href="spesific-post.html?id=${postId}" class="featured-block">
+    featuredData += `       <a href="/id-home-project/html/spesific-post.html?id=${data[i].id}" class="featured-block">
                               <div>
                                <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}" class="featured-images">
                                <h2 class="featured-title">${data[i].title.rendered}</h2>

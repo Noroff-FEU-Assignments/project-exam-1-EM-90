@@ -113,6 +113,14 @@ body {
   text-decoration: none;
   color: rgb(38, 38, 38);
   border: 0.1px solid rgb(233, 233, 233);
+  transition: 0.4s ease-in-out;
+}
+
+.featured-block:hover {
+  background-color: #ebdfc8;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
 }
 
 .featured-images {
