@@ -103,7 +103,7 @@ body {
 .slider {
   width: 100%;
   display: flex;
-  transition: 2000ms;
+  transition: 2000ms ease-in-out;
 }
 
 .featured-block {
