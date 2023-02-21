@@ -1,6 +1,6 @@
 let featuredData = "";
 let featuredContainer = document.querySelector(".slider");
-const carousel = document.querySelector(".carousel-container");
+
 const nextButton = document.querySelector(".right-handle");
 const previousButton = document.querySelector(".left-handle");
 let cards = document.querySelectorAll(".featured-block");
@@ -17,9 +17,9 @@ async function GetFeaturedPosts() {
 
 const AddFeaturedPosts = (data) => {
   for (let i = 0; i < 8; i++) {
-    //added the postId to get the querystring to the spesific id (post)
+    //added the postId to get the querystring to the specific id (post)
     console.log(data[i]);
-    featuredData += `       <a href="/id-home-project/html/spesific-post.html?id=${data[i].id}" class="featured-block">
+    featuredData += `       <a href="/id-home-project/html/specific-post.html?id=${data[i].id}" class="featured-block">
                               <div>
                                <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}" class="featured-images">
                                <h2 class="featured-title">${data[i].title.rendered}</h2>

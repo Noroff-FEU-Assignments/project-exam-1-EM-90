@@ -19,7 +19,7 @@ const AddBlogPostToHtml = (data) => {
   newPosts.forEach((post) => {
     fetchedPostIds.push(post.id);
     blogPostList += `
-                   <a href="spesific-post.html?id=${post.id}" class="post-block">
+                   <a href="specific-post.html?id=${post.id}" class="post-block">
                      <div>
                        <img src="${post._embedded["wp:featuredmedia"][0].source_url}" class="post-images">
                        <h2 class="post-title">${post.title.rendered}</h2>
