@@ -22,6 +22,30 @@ function AddSpecificPost(data) {
                            <img src="${data._embedded["wp:featuredmedia"][0].source_url}" class="specific-image">
                            <p>${data.content.rendered}</p>
                          </div>`;
+
+  //Initialize(GetSpecificPost, AddSpecificPost, data);
+  const specificImage = specificPostContainer.querySelector(".specific-image");
+
+  specificImage.addEventListener("click", () => {
+    const modalContent = document.createElement("img");
+    modalContent.src = specificImage.src;
+    console.log(specificImage);
+
+    //Moddal container
+    const modalContainer = document.createElement("div");
+    modalContainer.classList.add("modal-container");
+    modalContainer.appendChild(modalContent);
+
+    // Adding the modal to the page
+    document.body.appendChild(modalContainer);
+
+    //Adding eventlistener to make the modal close when clicking on the outside of the modal
+    modalContainer.addEventListener("click", (event) => {
+      if (!modalContent.contains(event.target)) {
+        document.body.removeChild(modalContainer);
+      }
+    });
+  });
 }
 
 GetSpecificPost();

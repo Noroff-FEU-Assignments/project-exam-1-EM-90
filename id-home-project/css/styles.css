@@ -103,7 +103,7 @@ body {
 .slider {
   width: 100%;
   display: flex;
-  transition: 2000ms ease-in-out;
+  transition: 1000ms ease-in-out;
 }
 
 .featured-block {
@@ -300,14 +300,33 @@ label {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .specific-image {
   object-fit: cover;
+  width: 50vw;
+  height: 30%;
+}
+
+/*--------------------------------------------------------------------------------------------------MODAL STYLING*/
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 60vh;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
 
 /*-------------------------------------------------------------------------------------FOOTER*/
