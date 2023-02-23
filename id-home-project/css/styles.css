@@ -114,6 +114,7 @@ body {
   color: rgb(38, 38, 38);
   border: 0.1px solid rgb(233, 233, 233);
   transition: 0.4s ease-in-out;
+  font-size: 1em;
 }
 
 .featured-block:hover {
@@ -125,9 +126,9 @@ body {
 
 .featured-images {
   width: 100%;
-  object-position: 50% 60%;
+  object-position: 50% 50%;
   object-fit: cover;
-  height: 18em;
+  aspect-ratio: 16 /10;
 }
 
 .left-handle,

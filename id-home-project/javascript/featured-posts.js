@@ -23,7 +23,7 @@ const AddFeaturedPosts = (data) => {
                               <div>
                                <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}" class="featured-images">
                                <h2 class="featured-title">${data[i].title.rendered}</h2>
-                               <p class="featured-text">${data[i].excerpt.rendered}</p>
+                               <p>${data[i].excerpt.rendered}</p>
                               </div>
                             </a>
                              `;
