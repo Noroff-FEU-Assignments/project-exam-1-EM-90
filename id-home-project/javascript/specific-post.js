@@ -22,6 +22,10 @@ function AddSpecificPost(data) {
                            <img src="${data._embedded["wp:featuredmedia"][0].source_url}" class="specific-image">
                            <p>${data.content.rendered}</p>
                          </div>`;
+  // i have tried importing the Initialize function from initalize.js. but i cant get it to work
+  // This is unfortunate, because it kind of defeats some of the purposse with functions.
+  //My plan was to rename the OnMounted function to initialize and pass in the other functions, so they could load in the right order.
+  // I get some errors in the consol, and i think it is because of the load order (AddSpecificPost is called inside the GetSpecificPost, before AddSpecificPost has benn loaded)
 
   //Initialize(GetSpecificPost, AddSpecificPost, data);
   const specificImage = specificPostContainer.querySelector(".specific-image");
