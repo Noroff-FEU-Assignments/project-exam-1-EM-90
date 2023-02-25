@@ -20,11 +20,15 @@ const AddFeaturedPosts = (data) => {
     //added the postId to get the querystring to the specific id (post)
     console.log(data[i]);
     featuredData += `       <a href="/id-home-project/html/specific-post.html?id=${data[i].id}" class="featured-block">
-                              <div>
+                             <div>
+                               <span class="read-more">Read More</span>
+                              <div class="overlay">
                                <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}" class="featured-images">
-                               <h2 class="featured-title">${data[i].title.rendered}</h2>
-                               <p>${data[i].excerpt.rendered}</p>
+                               <div class="gradient-overlay"></div>
                               </div>
+                               <h2 class="featured-title">${data[i].title.rendered}</h2>
+                               <p class="featured-text">${data[i].excerpt.rendered}</p>
+                             </div>
                             </a>
                              `;
   }
@@ -35,6 +39,8 @@ const AddFeaturedPosts = (data) => {
 function Carousel() {
   const cardWidth = cards[0].offsetWidth;
   let slideIndex = 0;
+  const mobileScreen = 660;
+  const tabletScreen = 1600;
 
   function displayCards() {
     featuredContainer.style.transform = `translateX(-${
@@ -43,13 +49,28 @@ function Carousel() {
   }
 
   nextButton.addEventListener("click", () => {
-    slideIndex = (slideIndex + 4) % cards.length;
+    if (window.innerWidth <= mobileScreen) {
+      slideIndex = (slideIndex + 1) % cards.length;
+    } else if (window.innerWidth <= tabletScreen) {
+      slideIndex = (slideIndex + 2) % cards.length;
+    } else {
+      slideIndex = (slideIndex + 4) % cards.length;
+    }
+
     displayCards();
+    console.log(slideIndex);
   });
 
   previousButton.addEventListener("click", () => {
-    slideIndex = (slideIndex - 4 + cards.length) % cards.length;
+    if (window.innerWidth <= mobileScreen) {
+      slideIndex = (slideIndex - 1 + cards.length) % cards.length;
+    } else if (window.innerWidth <= tabletScreen) {
+      slideIndex = (slideIndex - 2 + cards.length) % cards.length;
+    } else {
+      slideIndex = (slideIndex - 4 + cards.length) % cards.length;
+    }
     displayCards();
+    console.log(slideIndex);
   });
 
   window.addEventListener("resize", displayCards);
