@@ -21,7 +21,7 @@ const AddBlogPostToHtml = (data) => {
     blogPostList += `
                    <a href="specific-post.html?id=${post.id}" class="post-block">
                      <div>
-                       <img src="${post._embedded["wp:featuredmedia"][0].source_url}" class="post-images">
+                        <img src="${post._embedded["wp:featuredmedia"][0].source_url}" class="post-images">
                        <h2 class="post-title">${post.title.rendered}</h2>
                        <p class="post-text">${post.excerpt.rendered}</p>
                      </div>

@@ -60,7 +60,7 @@ body {
 
 .hamburger {
   display: none;
-  z-index: 2;
+  z-index: 1000;
 }
 
 /*---------------------------------------------------------------------------------------------HERO SECTION OF HOME PAGE*/
@@ -68,7 +68,7 @@ body {
 .hero-container {
   width: 100%;
   height: 37vh;
-  padding-bottom: 12em;
+  padding-top: 2%;
   background: rgba(0, 0, 0, 0.653) url(/id-home-project/images/hero-image2.jpg);
   background-blend-mode: darken;
   background-size: cover;
@@ -260,13 +260,18 @@ label {
 .post-block {
   border-radius: 5px;
   padding: 1rem 1rem;
-  width: 30rem;
-  line-height: 1.8rem;
+  width: 30em;
+  line-height: 1.2em;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   text-decoration: none;
   color: rgb(38, 38, 38);
   transition: 0.4s ease-in-out;
+  position: relative;
+}
+
+.post-block p {
+  font-size: 1em;
 }
 
 .post-block:hover {
@@ -278,7 +283,8 @@ label {
 .post-images {
   object-fit: cover;
   width: 100%;
-  height: 20em;
+  aspect-ratio: 16 / 9;
+  position: relative;
 }
 
 .post-title {
@@ -296,6 +302,7 @@ label {
   width: 10%;
   margin: 0 auto;
   cursor: pointer;
+  margin-bottom: 3em;
 }
 
 /*-------------------------------------------------------------------------------------SPESIFIC POSTS*/
@@ -380,9 +387,14 @@ footer p {
   .hamburger span {
     flex-direction: column;
     width: 40px;
-    height: 5px;
+    height: 1px;
     background-color: white;
-    margin: 2.5px;
+    margin: 4.5px;
+    transition: 100ms;
+  }
+
+  .hamburger span:nth-child(2) {
+    width: 25px;
   }
 
   .nav-items {
@@ -392,15 +404,20 @@ footer p {
   .nav-items-active {
     position: absolute;
     right: 0px;
-    height: 30vh;
+    height: 100vh;
     top: 0vh;
     background-color: #4a5c5f;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
+  }
+
+  .nav-items li {
+    padding-bottom: 10%;
+    padding-left: 10%;
   }
 }
 
@@ -408,12 +425,14 @@ footer p {
 @media screen and (max-width: 1800px) {
   .hero-container {
     height: 20vh;
+    padding: 1%;
   }
 }
 
 @media screen and (max-width: 1600px) {
   .hero-container {
-    height: 25vh;
+    height: 20vh;
+    padding: 1%;
   }
 
   .hero-text {
@@ -474,6 +493,10 @@ footer p {
     flex: 0 0 100%;
     padding: 4% 5%;
   }
+
+  .post-block {
+    font-size: 1em;
+  }
 }
 
 /*------------------------------------------------------------------------------------------MOBILE*/
@@ -503,8 +526,9 @@ footer p {
 
   .featured-block {
     flex: 0 0 100%;
-    padding: 2% 2%;
+    padding: 5% 5%;
     position: relative;
+    font-size: 0.8em;
   }
 
   .featured-image {
@@ -522,7 +546,7 @@ footer p {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1em;
+    font-size: 1.4em;
     background-color: #242424;
     padding: 4% 7%;
     border-radius: 1em;
