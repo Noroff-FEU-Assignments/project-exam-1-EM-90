@@ -24,6 +24,7 @@ const AddBlogPostToHtml = (data) => {
                         <img src="${post._embedded["wp:featuredmedia"][0].source_url}" class="post-images">
                        <h2 class="post-title">${post.title.rendered}</h2>
                        <p class="post-text">${post.excerpt.rendered}</p>
+                       <div class="read-more-button">Read more</div>
                      </div>
                     </a>
                    `;

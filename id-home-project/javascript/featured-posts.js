@@ -21,13 +21,10 @@ const AddFeaturedPosts = (data) => {
     console.log(data[i]);
     featuredData += `       <a href="/id-home-project/html/specific-post.html?id=${data[i].id}" class="featured-block">
                              <div>
-                               <span class="read-more">Read More</span>
-                              <div class="overlay">
                                <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}" class="featured-images">
-                               <div class="gradient-overlay"></div>
-                              </div>
                                <h2 class="featured-title">${data[i].title.rendered}</h2>
                                <p class="featured-text">${data[i].excerpt.rendered}</p>
+                               <div class="read-more-button">Read more</div>
                              </div>
                             </a>
                              `;
