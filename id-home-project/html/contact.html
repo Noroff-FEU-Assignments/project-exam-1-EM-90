@@ -20,7 +20,7 @@
   <body>
     <header>
       <nav class="main-nav">
-        <a href="index.html" class="logo">ID Home</a>
+        <a href="/index.html" class="logo">ID Home</a>
         <ul class="nav-items">
           <li><a href="blog-posts.html">Posts</a></li>
           <li><a href="about.html">About</a></li>
@@ -36,6 +36,9 @@
     <main class="form-container">
       <form id="contact-form" action="">
         <h1 class="contact-header">Contact</h1>
+        <div class="confirmation">
+          Your message has been sent<span class="check-icon">&check;</span>
+        </div>
         <div class="name-input">
           <label for="name">Full Name</label>
           <input
@@ -72,11 +75,14 @@
             Your message must contain a subject
           </div>
         </div>
-        <label for="message">Your message</label>
+        <label for="message"
+          >Your message
+          <div class="error-message" id="text-error">
+            25 characters minimum
+          </div></label
+        >
         <textarea id="message" name="message" rows="10" cols="55"></textarea>
-        <button disabled type="submit" class="submit-button">
-          Send message
-        </button>
+        <button class="submit-button">Send message</button>
       </form>
     </main>
     <footer>
