@@ -1,6 +1,6 @@
 # IDhome - Interior design
 
-![image](https://project-exam-1-EM-90/id-home-project/images/main-site-exame-project-1.PNG)
+![image](https://id-home-project\images\main-site-exame-project-1.PNG)
 
 ## Description
 
@@ -13,7 +13,7 @@ The page consists of a main page, a page for every blog post, about page, and a 
 The main page shows a carousel where the user can view the latest posts.
 
 Note: the carousel is responsive on all platforms, but if you use developer tools to adjust the screen size
-you might have to update the site for the carousel to work correctly.  
+you might have to update the site for the carousel to work correctly.
 
 The main tasks in this project:
 
@@ -33,17 +33,16 @@ The main tasks in this project:
 ### Installing
 
 1. Clone the repo:
-https://github.com/Noroff-FEU-Assignments/project-exam-1-EM-90.git
+   https://github.com/Noroff-FEU-Assignments/project-exam-1-EM-90.git
 
 ### Running
-You can use live server in VScode to run it 
 
+You can use live server in VScode to run it
 
 ## Contributing
 
-No contributors  
+No contributors
 
 ## Contact
 
 eirik.michielsen@gmail.com
-
