@@ -33,11 +33,10 @@ The main tasks in this project:
 ### Installing
 
 1. Clone the repo:
-
-
-
+https://github.com/Noroff-FEU-Assignments/project-exam-1-EM-90.git
 
 ### Running
+You can use live server in VScode to run it 
 
 
 ## Contributing
