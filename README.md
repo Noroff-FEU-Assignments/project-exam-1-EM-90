@@ -1,6 +1,6 @@
 # IDhome - Interior design
 
-![image](https://project-exam-1-EM-90/id-home-project/images/Skjermbilde av hovedside exam project 1.PNG)
+![image](https://id-home-project/project-exam-1-EM-90/id-home-project/images/Skjermbilde av hovedside exam project 1.PNG)
 
 ## Description
 
